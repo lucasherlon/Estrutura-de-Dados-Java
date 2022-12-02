@@ -26,7 +26,8 @@ public class Pilha <Tipo> {
         if (estaVazia()) {
             throw new Exception("Pilha Vazia: não é possível desempilhar");
         }
-        this.vetor[top--] = null;
+        top--;
+        this.vetor[top] = null;
     }
 
 }
