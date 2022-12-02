@@ -1,5 +1,5 @@
 package br.ufpi.lucasherlon.estdados.pilha;
-// Pilha feita com vetor sem reajuste de tamanho
+// Versão simplificada de uma pilha feita com vetor sem reajuste de tamanho
 public class Pilha <Tipo> {
 
     private Tipo[] vetor;
