@@ -11,7 +11,7 @@ public class Pilha <Tipo> {
         this.top = 0;
     }
 
-    public boolean estaVazia() {return top == 0;}
+    public boolean estaVazia() {return this.top == 0;}
 
     public int tamanho() { return this.top;}
 
@@ -19,15 +19,15 @@ public class Pilha <Tipo> {
         if(this.top >= TAM) {
             throw new Exception("Pilha cheia: não é possível empilhar");
         }
-        this.vetor[top++] = elemento;
+        this.vetor[this.top++] = elemento;
     }
 
     public void desempilhar() throws Exception {
         if (estaVazia()) {
             throw new Exception("Pilha Vazia: não é possível desempilhar");
         }
-        top--;
-        this.vetor[top] = null;
+        this.top--;
+        this.vetor[this.top] = null;
     }
 
 }
