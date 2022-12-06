@@ -13,27 +13,27 @@ public class Pilha <Tipo> {
         this.top = 0;
     }
 
-    public boolean estaVazia() {return this.top == 0;}
+    public boolean estaVazia() {return top == 0;}
 
-    public int tamanho() { return this.top;}
+    public int tamanho() { return top;}
 
     public void empilhar(Tipo elemento) {
-        if(this.top >= TAM) throw new StackOverflowError("Pilha cheia: não é possível empilhar");
+        if(top >= TAM) throw new StackOverflowError("Pilha cheia: não é possível empilhar");
      
-        this.vetor[this.top++] = elemento;
+        this.vetor[top++] = elemento;
     }
     
     public Tipo desempilhar() {
         if (estaVazia()) throw new NoSuchElementException("Pilha Vazia: não é possível desempilhar");
-        this.top--;
-        Tipo elemento = this.vetor[this.top];
-        this.vetor[this.top] = null;
+        top--;
+        Tipo elemento = this.vetor[top];
+        this.vetor[top] = null;
         return elemento;
     }
     
     public Tipo getTopo() {
     	if(estaVazia()) throw new NoSuchElementException("A pilha está vazia");
-    	return this.vetor[this.top-1];
+    	return this.vetor[top-1];
     }
 
 }
