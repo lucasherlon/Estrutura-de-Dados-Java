@@ -33,8 +33,7 @@ public class Pilha <Tipo> {
     }
     
     public Tipo getTopo() {
-    	this.top--;
-    	return this.vetor[this.top];
+    	return this.vetor[this.top -1];
     }
 
 }
