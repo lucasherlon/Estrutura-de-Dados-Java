@@ -1,10 +1,10 @@
-package br.ufpi.lucasherlon.estdados.pilha;
-// Versão simplificada de uma pilha feita com vetor, sem reajuste de tamanho
+package ufpi.estdados;
+
 public class Pilha <Tipo> {
 
     private Tipo[] vetor;
     private int top;
-    private final int TAM = 1000;
+    private final int TAM = 5;
 
     public Pilha() {
         this.vetor = (Tipo[]) new Object[TAM];
@@ -21,13 +21,20 @@ public class Pilha <Tipo> {
         }
         this.vetor[this.top++] = elemento;
     }
-
-    public void desempilhar() throws Exception {
-        if (estaVazia()) {
-            throw new Exception("Pilha Vazia: não é possível desempilhar");
-        }
+    
+    public Tipo desempilhar() throws Exception{
+        if (estaVazia()) throw new Exception("Pilha Vazia: não é possível desempilhar");
+       
         this.top--;
+        Tipo elemento = this.vetor[this.top];
         this.vetor[this.top] = null;
+        
+        return elemento;
+    }
+    
+    public Tipo getTopo() {
+    	this.top--;
+    	return this.vetor[this.top];
     }
 
 }
