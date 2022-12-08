@@ -13,12 +13,12 @@ public class Pilha <Tipo> {
         this.top = 0;
     }
 
-    public boolean estaVazia() {return top == 0;}
+    public boolean estaVazia() {return this.top == 0;}
 
-    public int tamanho() { return top;}
+    public int tamanho() { return this.top;}
 
     public void empilhar(Tipo elemento) {
-        if(top >= TAM) throw new StackOverflowError("Pilha cheia: não é possível empilhar");
+        if(this.top >= TAM) throw new StackOverflowError("Pilha cheia: não é possível empilhar");
      
         this.vetor[top++] = elemento;
     }
