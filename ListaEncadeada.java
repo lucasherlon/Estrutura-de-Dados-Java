@@ -1,10 +1,10 @@
 package listaligada;
 /*
- 	Lista duplamente encadeada com dois descritores
-	@author Davi Nascimento 
-	@author Kauã Marques 
-	@author Lucas Herlon
- */
+  Lista duplamente encadeada com dois descritores
+  @author Davi Nascimento 
+  @author Kauã Marques 
+  @author Lucas Herlon
+*/
 import java.util.NoSuchElementException;
 
 public class ListaEncadeada <Tipo> {
