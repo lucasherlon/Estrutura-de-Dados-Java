@@ -1,6 +1,6 @@
 package listaligada;
 /*
- * Lista duplamente encadeada com dois descritores
+ 	Lista duplamente encadeada com dois descritores
 	@author Davi Nascimento 
 	@author Kauã Marques 
 	@author Lucas Herlon
