@@ -94,9 +94,6 @@ public class ListaEncadeada <Tipo> {
 	
 	//Exclui o primeiro elemento da lista
 	private Tipo excluirInicio() {
-		if (estaVazia()) {
-			throw new RuntimeException("Empty list");
-	    }
 	    Tipo elemento = this.inicio.elemento;
 	    this.inicio = this.inicio.proximo;
 	    this.tamanho--;
@@ -111,9 +108,6 @@ public class ListaEncadeada <Tipo> {
 	  
 	//Exclui o último elemento da lista
 	private Tipo excluirFim() {
-	    if (estaVazia()) {
-	    	throw new RuntimeException("Empty list");
-	    }
 	    Tipo elemento = this.fim.elemento;
 	    this.fim = this.fim.anterior;
 	    this.tamanho--;
